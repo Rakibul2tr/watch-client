@@ -3,7 +3,7 @@ willcome oure website
 
 ### ouer website live link "click link at blowe and see this site".
 
- [http://localhost:3000](http://localhost:3000) 
+ localhost [http://localhost:3000] ***live link [https://smart-watch-8b734.web.app/]
 
 
 

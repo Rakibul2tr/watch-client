@@ -52,7 +52,7 @@ const Singleproduct = () => {
                 <Grid item xs={12} md={5}>
                 <Paper elevation={0} sx={{p:1}}>
                     <Box className=" text-center">
-                        <img src={product.img} alt="" />
+                        <img width="100%" height="100%" src={product.img} alt="" />
                     </Box>
                     <Box className="p-2">
                         <Typography variant="h5"sx={{color:'#444',fontSize:'20px'}}>

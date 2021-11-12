@@ -3,6 +3,7 @@
 }
 body{
   background-color: #f1f0ee !important;
+  clear: both;
 }
 .carousel-control-next, .carousel-control-prev{
   z-index: -1 !important;
@@ -32,12 +33,10 @@ a:hover{
   color: #444 !important;
 }
 .homebennerbg{
-  /* background-image: linear-gradient(rgba(182, 37, 230, 0.446),
-  rgba(14, 225, 133, 0.542)); */
   background-image: url('./images/homebennerbg2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: auto;
   position: relative;
   z-index: -1;
 }
@@ -49,7 +48,7 @@ a:hover{
   top: 0;
   left: 0;
   background-color: black;
-  opacity: .5;
+  opacity: .7;
   z-index: -1;
 }
 .imagehome{
@@ -71,6 +70,11 @@ a:hover{
 }
 .slideCaption{
   bottom:10% !important;
+}
+
+.carouselitem img{
+  height: 100% !important;
+  width: 100%;
 }
 .slideCaption h1{
   font-weight: 700;
