@@ -1,0 +1,42 @@
+
+.bennerbgblack{
+    position: relative;
+    height: 600px;
+}
+.bennerbgblack::after{
+    position:absolute;
+    width: 250px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    content: '';
+    background-color:#203351;
+    z-index: -1;
+   
+}
+.gradientbtn {
+    background-image: linear-gradient(
+93deg, #35e5ad,#6eede7);
+color: white;
+font-size: 14px;
+}
+.Apoinmentbg{
+    background-image: url('../../images/appointment-bg.png');
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index:100;
+}
+.Apoinmentbg::after{
+position: absolute;
+width: 100%;
+height: 100%;
+content: '';
+top: 0;
+left: 0;
+background-color:#263348 ;
+z-index:-1;
+opacity: .8;
+}

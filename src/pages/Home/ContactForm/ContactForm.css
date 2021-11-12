@@ -1,0 +1,40 @@
+
+.Contactbg{
+    background-image: url('../../../images/bg.jpg');
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    margin: auto;
+}
+.Contactbg::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(43, 49, 87);
+    opacity: .8;
+    z-index: -1;
+}
+.Contactform{
+    width: 600px;
+    margin: auto;
+    padding: 10px;
+    border:1px solid #fff;
+    background-color: rgba(26, 24, 24, 0.474);
+}
+.Contactform input,textarea{
+    width: 100% !important;
+    margin: 5px;
+    padding: 5px;
+}
+.Contactform input[type='submit']{
+    width: 100px !important;
+    cursor: pointer;
+    background:rgba(22, 22, 22, 0.878);
+    color: white;
+    font-size: 14px;
+    border: 1px solid #fff;
+    padding: 8px 15px;
+}

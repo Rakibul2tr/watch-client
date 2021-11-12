@@ -1,0 +1,14 @@
+.footerbg{
+    background-image: url('../../../images/footerbg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+
+.footerh6{
+    color: #fff;
+    display: block;
+    cursor: pointer !important;
+    padding: 5px 0;
+}

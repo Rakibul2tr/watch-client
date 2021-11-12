@@ -1,0 +1,20 @@
+
+.formApoin{
+    height: 500px;
+}
+.formApoin input{
+    width: 550px;
+    margin: 5px;
+    padding: 8px;
+}
+.formApoin input[type="submit"] {
+    width: 200px;
+    background-color: #444;
+    cursor: pointer;
+    color: #fff;
+}
+.formApoin input[type="submit"]:hover {
+    width: 200px;
+    background-color: #000;
+    cursor: pointer;
+}

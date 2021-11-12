@@ -1,0 +1,17 @@
+.updateorderform{
+    
+}
+.updateorderform input,select{
+    width: 100%;
+    padding: 5px;
+    margin: 3px;
+}
+.updatebtn{
+    color: #000 !important;
+    cursor: pointer;
+    
+  }
+  .updatebtn:hover{
+    color: #fff !important;
+    background-color:#444 ;
+  }

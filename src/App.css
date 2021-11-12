@@ -1,16 +1,11 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: #f1f0ee !important;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.carousel-control-next, .carousel-control-prev{
+  z-index: -1 !important;
 }
 
 .App-header {
@@ -27,12 +22,170 @@
 .App-link {
   color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a{
+  color:#fff !important;
+  text-decoration: none !important;
+  border-radius: 5px;
 }
+a:hover{
+  background-color: #fff;
+  color: #444 !important;
+}
+.homebennerbg{
+  /* background-image: linear-gradient(rgba(182, 37, 230, 0.446),
+  rgba(14, 225, 133, 0.542)); */
+  background-image: url('./images/homebennerbg2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  z-index: -1;
+}
+.homebennerbg::after{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: .5;
+  z-index: -1;
+}
+.imagehome{
+  position: relative;
+}
+.contenthome{
+  position: absolute;
+  bottom: 10%;
+}
+.bgtopNav{
+  background-color: rgba(15, 15, 15, 0.7);
+}
+.navbg{
+  background-color: rgba(0, 0, 0, 0.919);
+}
+.navigaition a{
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.slideCaption{
+  bottom:10% !important;
+}
+.slideCaption h1{
+  font-weight: 700;
+  color: #fff!important;
+}
+.carouselbtn{
+  border: none;
+  width: 120px;
+  background-color:#fff ;
+  height: 40px;
+  color: #000;
+}
+/* products section */
+.products{
+  border-bottom: 1px solid #000;
+  padding-bottom: 80px !important;
+}
+.products Button{
+  background-color:#444;
+  border: 0;
+  width: 100px;
+  height: 40px;
+  color: #fff;
+}
+.products Button:hover{
+  background-color: #000;
+  color: #fff;
+}
+.productsimg{
+  width: 200px;
+  height: 250px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 8px;
+}
+.products img{
+  transition: transform .3s;
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+}
+.products img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+.productcontent,.productcontenthome{
+  border-top: 1px solid #000;
+  margin-top: 5px;
+  text-align: center;
+}
+.productcontenthome{
+  padding: 0 5px;
+}
+
+.deshbordbtn Button{
+  color:#000 ;
+}
+.deshbordbtn Button:hover{
+  background-color: #000;
+  color: #fff;
+}
+.deshbordbtn Button:active{
+  background-color: #000 !important;
+}
+
+.bg-right{
+  background-image: url(https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80);
+  min-height: 300px;
+  position: relative;
+  top: 50% !important;
+  
+}
+.clock{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 50%;
+  left: 0%;
+  border: 2px solid grey;
+  width: 500px;
+  margin: auto;
+  padding: 50px;
+  margin-top: 15px;
+}
+.clock span{
+  width: 100px;
+  color: aliceblue;
+  font-size: 50px;
+  border: 1px solid gainsboro;
+  text-align: center;
+  padding: 10px;
+  font-weight: 700;
+}
+
+.benner{
+ background-image: url('./images/bg.jpg');
+ background-position: center;
+ height: 350px;
+ width: 100%;
+ position: relative;
+ z-index: -1;
+}
+.benner::after{
+position: absolute;
+width: 100%;
+height: 100%;
+content: "";
+top: 0;
+left: 0;
+background-color: black;
+opacity: 0.7;
+z-index: -1;
+}
+
