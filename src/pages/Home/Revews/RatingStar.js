@@ -26,7 +26,7 @@ const RatingStar = (props) => {
                 </Box>
             </Box>
             <Stack spacing={1}>
-                <Rating name="size-small" defaultValue={rating} size="small" />
+                <Rating name="size-small" readOnly defaultValue={rating} size="small" />
             </Stack>
         </Paper>
         

@@ -25,7 +25,7 @@ const Benner = () => {
                         alt="First slide"
                         />
                         <Carousel.Caption className="slideCaption">
-                        <h1 style={{fontSize:'35px',fontWeight:700}}>Jet Black ColorFit Pro 2 Smartwatch</h1>
+                        <h1 style={{fontSize:'30px',fontWeight:700}}>Jet Black ColorFit Pro 2 Smartwatch</h1>
                         <Button className="carouselbtn">Get Start</Button>
                         </Carousel.Caption>
                     </Carousel.Item>
@@ -39,7 +39,7 @@ const Benner = () => {
 
                         </Box>
                         <Carousel.Caption className="slideCaption">
-                        <h1 style={{fontSize:'35px'}}>Men Black Chronograph Watch CH2600_SOR</h1>
+                        <h1 style={{fontSize:'30px'}}>Men Black Chronograph Watch CH2600_SOR</h1>
                         <Button className="carouselbtn">Get Start</Button>
                         </Carousel.Caption>
                     </Carousel.Item>
@@ -51,7 +51,7 @@ const Benner = () => {
                         />
 
                         <Carousel.Caption className="slideCaption">
-                        <h1 style={{fontSize:'35px'}}>Men Black Chronograph Watch CH2600_SOR</h1>
+                        <h1 style={{fontSize:'30px'}}>Men Black Chronograph Watch CH2600_SOR</h1>
                         <Button className="carouselbtn">Get Start</Button>
                         </Carousel.Caption>
                     </Carousel.Item>

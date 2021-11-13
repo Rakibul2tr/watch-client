@@ -2,8 +2,13 @@ import { Typography } from '@mui/material';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import reviewimga from '../../../images/review.gif'
+import useAuth from '../../../Hoocks/useAuth';
+
+
+const url='https://lh3.googleusercontent.com/a-/AOh14GgGbcEQsxdrRib6Cmqo5ZKA6eWHdn-vfkM9GgOW=s96-c';
 
 const Reviews = () => {
+    const {user}=useAuth();
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         fetch('https://intense-temple-06841.herokuapp.com/review',{
@@ -33,7 +38,7 @@ const Reviews = () => {
                     <input {...register("sub_title")} placeholder="Your Profasion"/><br/>
                     <input {...register("des")}  placeholder='writhe Revew Something'/><br/>
                     <input {...register("rating")} type="number" min="1" max="5" placeholder='reting star (between 1 - 5) only'/><br/>
-                    <input defaultValue={'https://lh3.googleusercontent.com/a-/AOh14GgGbcEQsxdrRib6Cmqo5ZKA6eWHdn-vfkM9GgOW=s96-c'} {...register("img")} placeholder='Give img Link'/><br/>
+                    <input defaultValue={user.photoURL?user.photoURL:url} {...register("img")} placeholder='Give img Link'/><br/>
                     <input type="submit" value="Add Review" />
                 </form>
             </div>
