@@ -14,7 +14,7 @@ const Reviews = () => {
         .then(res=>res.json())
         .then(data=>{
             if(data.insertedId){
-                alert('Thanks Yore Service Data is Added')
+                alert('Thanks for Review.')
             }
         })
     }
@@ -32,6 +32,7 @@ const Reviews = () => {
                     <input  {...register("name")} placeholder='Your Name' /><br/>
                     <input {...register("sub_title")} placeholder="Your Profasion"/><br/>
                     <input {...register("des")}  placeholder='writhe Revew Something'/><br/>
+                    <input {...register("rating")} type="number" min="1" max="5" placeholder='reting star (between 1 - 5) only'/><br/>
                     <input defaultValue={'https://lh3.googleusercontent.com/a-/AOh14GgGbcEQsxdrRib6Cmqo5ZKA6eWHdn-vfkM9GgOW=s96-c'} {...register("img")} placeholder='Give img Link'/><br/>
                     <input type="submit" value="Add Review" />
                 </form>

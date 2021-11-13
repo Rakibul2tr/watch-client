@@ -15,7 +15,7 @@ const AddProduct = () => {
         .then(res=>res.json())
         .then(data=>{
             if(data.insertedId){
-                alert('Thanks Yore Service Data is Added')
+                alert('Thanks Yore product is Added')
             }
         })
     

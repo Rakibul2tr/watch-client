@@ -9,17 +9,27 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { Typography } from '@mui/material';
 
-const AllUsers = () => {
-    const [users,setusers]=useState([])
-    useEffect( ()=>{
-        fetch('https://intense-temple-06841.herokuapp.com/users')
+const ManegeProducts = () => {
+    const {products}=useAuth();
+    const handleOpen=(id)=>{
+        const prossed= window.confirm('Are you sure delete this products ?')
+        if(prossed){
+            fetch(`https://intense-temple-06841.herokuapp.com/manegproduct/${id}`,{
+            method:'DELETE',
+            headers:{'content-type':'application/json'}
+        })
         .then(res=>res.json())
-        .then(data=>setusers(data))
-    },[])
+        .then(data=>{
+            if(data.deletedCount){
+                alert('Your product is deleted.')
+            }
+        })
+        }
+    }
     return (
         <TableContainer component={Paper}>
         <Typography variant='h4' sx={{pb:2,textAlign:'center',color:'#000'}}>
-            All Users of This Site {users.length}
+            All Products of This Site {products.length}
         </Typography>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
@@ -30,16 +40,20 @@ const AllUsers = () => {
             </TableRow>
             </TableHead>
             <TableBody>
-            {users.map((row) => (
+            {products.map((row) => (
                 <TableRow
                 key={row._id}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
+                 <TableCell  align="left">
+                     <img width="30px" src={row.img} alt="" />
+                 </TableCell>
                 <TableCell sx={{backgroundColor:'#444',color:'white'}} component="th" scope="row">
                     {row.name}
                 </TableCell>
-                <TableCell  align="left">{row.email}</TableCell>
-                <TableCell sx={{backgroundColor:'#000',color:'white'}} align="left">{row.role}</TableCell>
+                <TableCell  align="left">{row.des.slice(0,30)}. . .</TableCell>
+                <TableCell sx={{color:'#000'}} align="left">$ {row.price}</TableCell>
+                <TableCell className="updatebtn" onClick={()=>handleOpen(row._id)} align="left">Delete</TableCell>
                 </TableRow>
             ))}
             </TableBody>
@@ -48,4 +62,4 @@ const AllUsers = () => {
     );
 };
 
-export default AllUsers;
+export default ManegeProducts;

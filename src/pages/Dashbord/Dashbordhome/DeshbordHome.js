@@ -13,6 +13,7 @@ import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import useAuth from '../../../Hoocks/useAuth';
 import AllUsers from '../Allusers/AllUsers';
 import ManegeOrders from '../ManageAllOrders/ManegeOrders';
+import ManegeProducts from '../ManegeProducts/ManegeProducts';
 const DeshbordHome = () => {
   const {admin,user,logOut}=useAuth();
     const [control,setcontrol]=React.useState('home')
@@ -34,6 +35,7 @@ const DeshbordHome = () => {
                   <Button onClick={()=>setcontrol('makeadmin')}>Make Admin</Button>
                   <Button onClick={()=>setcontrol('allusers')}>All Users</Button>
                   <Button onClick={()=>setcontrol('manegeorders')}>Manege Orders</Button>
+                  <Button onClick={()=>setcontrol('manegeproducts')}>Manege Products</Button>
                   </>:<>
                   <Button onClick={()=>setcontrol('myorders')}>My Orders</Button>
                   <Button onClick={()=>setcontrol('pay')}>Pay Here</Button>
@@ -69,6 +71,9 @@ const DeshbordHome = () => {
                 }
                 {
                 control==="manegeorders"&&<ManegeOrders/>
+                }
+                {
+                control==="manegeproducts"&&<ManegeProducts/>
                 }
             </Box>
           </Grid>

@@ -7,7 +7,6 @@ import useAuth from '../../../Hoocks/useAuth';
 
 const Allproducts = () => {
     const {products}=useAuth()
-    console.log(products);
     return (
         <Container className="products">
             <Typography variant="h3" sx={{color:'#000',textAlign:'center',py:5}}>
